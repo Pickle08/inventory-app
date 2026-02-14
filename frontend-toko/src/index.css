@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Bikin teks format tanggal jadi abu-abu tipis biar nggak mencolok */
+input[type="date"]::-webkit-datetime-edit {
+    color: #94a3b8; /* slate-400 */
+}
+
+/* Pas udah diisi, warnanya jadi item/putih lagi */
+input[type="date"]:not([value=""])::-webkit-datetime-edit {
+    color: inherit;
+}
+
+/* Hilangkan icon kalender bawaan browser karena kita udah punya icon Lucide */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.5; /* Biar tetap ada tapi tipis */
+}
